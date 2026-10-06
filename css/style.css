@@ -1,0 +1,11 @@
+/* Antislop focus styles */
+:focus-visible {
+  outline: 2px solid #b45309 !important;
+  outline-offset: 2px !important;
+}
+
+/* Touch target guarantee */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
