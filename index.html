@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawon Selera Catering - Katering Nasi Box, Prasmanan, & Snack Box</title>
+  <meta name="description" content="Katering profesional untuk kebutuhan makan kantor, syukuran, dan hajatan keluarga. Porsi pas, rasa otentik nusantara, dan tiba tepat waktu.">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            culinary: {
+              surface: '#fcfbf7',
+              card: '#ffffff',
+              border: '#e7e3da',
+              dark: '#1c1917',
+              muted: '#57534e',
+            },
+            wa: {
+              DEFAULT: '#047857',
+              hover: '#065f46',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Antislop focus styles */
+    :focus-visible {
+      outline: 2px solid #b45309 !important;
+      outline-offset: 2px !important;
+    }
+    /* Touch target guarantee */
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  </style>
+</head>
+<body class="bg-culinary-surface text-culinary-dark font-sans antialiased selection:bg-brand-200 selection:text-brand-900 pb-28 md:pb-12">
+
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-culinary-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 py-3.5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <span class="w-10 h-10 rounded-lg bg-brand-700 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+          PS
+        </span>
+        <div>
+          <span class="block font-extrabold text-lg text-culinary-dark leading-tight group-hover:text-brand-700 transition-colors">
+            Pawon Selera
+          </span>
+          <span class="block text-xs font-medium text-culinary-muted">
+            Katering Rumahan & Kantor
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-culinary-muted" aria-label="Navigasi Utama">
+        <a href="#katalog" class="hover:text-brand-700 transition-colors py-2">Katalog Menu</a>
+        <a href="#kalkulator" class="hover:text-brand-700 transition-colors py-2">Kalkulator Pesanan</a>
+        <a href="#panduan" class="hover:text-brand-700 transition-colors py-2">Cara Pesan</a>
+        <a href="#kontak" class="hover:text-brand-700 transition-colors py-2">Kontak Dapur</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="#kalkulator" class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-bold bg-brand-700 hover:bg-brand-800 text-white shadow-sm transition-colors touch-target">
+          Hitung Pesanan
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="relative pt-10 pb-14 md:pt-16 md:pb-20 border-b border-culinary-border bg-gradient-to-b from-brand-50/70 to-culinary-surface">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <!-- Trust Badges (Halal, Higienis, Tepat Waktu) -->
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-5">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-900 border border-emerald-300">
+              <svg class="w-3.5 h-3.5 text-emerald-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              100% Halal
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-amber-100 text-amber-950 border border-amber-300">
+              <svg class="w-3.5 h-3.5 text-amber-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+              Dapur Higienis
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-stone-100 text-stone-900 border border-stone-300">
+              <svg class="w-3.5 h-3.5 text-stone-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Tepat Waktu Garansi Tiba
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-culinary-dark tracking-tight leading-[1.18] mb-4">
+            Katering Lezat, Porsi Pas, Siap Antar untuk Rapat Kantor & Acara Keluarga
+          </h1>
+
+          <p class="text-base sm:text-lg text-culinary-muted leading-relaxed mb-8 max-w-2xl">
+            Dari nasi box rapat mendadak, snack box arisan, hingga prasmanan syukuran. Dimasak langsung dari bahan segar di hari pengantaran tanpa kompromi rasa.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+            <a href="#kalkulator" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-base font-bold bg-brand-700 hover:bg-brand-800 text-white shadow-sm transition-colors text-center touch-target">
+              Hitung Biaya Pesanan
+            </a>
+            <a href="#katalog" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-base font-bold bg-white hover:bg-stone-50 text-culinary-dark border border-culinary-border shadow-xs transition-colors text-center touch-target">
+              Lihat Daftar Menu
+            </a>
+          </div>
+
+          <!-- Highlight Info -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-8 mt-8 border-t border-culinary-border/70 text-sm">
+            <div>
+              <div class="font-bold text-culinary-dark">Mulai Rp 15.000</div>
+              <div class="text-culinary-muted text-xs">Pilihan snack & nasi box</div>
+            </div>
+            <div>
+              <div class="font-bold text-culinary-dark">Pesan Minimal H-1</div>
+              <div class="text-culinary-muted text-xs">Slot dapur terjaga fresh</div>
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <div class="font-bold text-culinary-dark">Free Ongkir Area Tertentu</div>
+              <div class="text-culinary-muted text-xs">Untuk pesanan di atas 50 pax</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Katalog Menu Dinamis -->
+    <section id="katalog" class="py-14 md:py-20 border-b border-culinary-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <!-- Section Title & Filter Tabs -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-700 block mb-1">Pilihan Dapur Kami</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-culinary-dark tracking-tight">Katalog Menu Siap Pesan</h2>
+            <p class="text-sm text-culinary-muted mt-1">Pilih paket menu favorit Anda untuk langsung masuk ke kalkulator pesanan.</p>
+          </div>
+
+          <!-- Category Pill Buttons -->
+          <div class="flex items-center gap-1.5 p-1 bg-stone-100/90 rounded-xl border border-culinary-border overflow-x-auto max-w-full" role="tablist" aria-label="Filter Kategori Menu">
+            <button type="button" role="tab" aria-selected="true" data-category="all" class="category-filter-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all bg-brand-700 text-white shadow-xs touch-target">
+              Semua Menu
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-category="nasi_box" class="category-filter-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-culinary-muted hover:text-culinary-dark touch-target">
+              Nasi Box
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-category="prasmanan" class="category-filter-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-culinary-muted hover:text-culinary-dark touch-target">
+              Prasmanan
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-category="snack" class="category-filter-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-culinary-muted hover:text-culinary-dark touch-target">
+              Snack Box
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Menu Cards Container (Populated via JS) -->
+        <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" aria-live="polite">
+          <!-- Loading skeleton state -->
+          <div class="col-span-full py-16 text-center text-culinary-muted">
+            <div class="inline-block w-8 h-8 border-3 border-brand-700 border-t-transparent rounded-full animate-spin mb-3"></div>
+            <p class="text-sm font-medium">Memuat katalog menu...</p>
+          </div>
+        </div>
+
+        <!-- Empty State Container (Hidden by default) -->
+        <div id="menu-empty-state" class="hidden col-span-full py-12 px-6 text-center bg-white rounded-2xl border border-culinary-border">
+          <svg class="w-12 h-12 text-culinary-muted mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <h3 class="text-base font-bold text-culinary-dark mb-1">Menu Tidak Ditemukan</h3>
+          <p class="text-sm text-culinary-muted mb-4">Tidak ada menu yang sesuai dengan filter kategori ini.</p>
+          <button type="button" onclick="filterMenu('all')" class="inline-flex items-center px-4 py-2 rounded-lg text-sm font-bold bg-brand-700 text-white hover:bg-brand-800 transition-colors touch-target">
+            Tampilkan Semua Menu
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Interactive Order Calculator Section -->
+    <section id="kalkulator" class="py-14 md:py-20 border-b border-culinary-border bg-stone-50/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-700 block mb-1">Simulasi Biaya Transparan</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-culinary-dark tracking-tight">Kalkulator Pesanan Katering</h2>
+          <p class="text-sm text-culinary-muted mt-2">Sesuaikan paket, jumlah pax, dan menu tambahan. Dapatkan estimasi total biaya seketika dan kirim langsung ke WhatsApp admin.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Form Configuration (Left side, 7 cols) -->
+          <div class="lg:col-span-7 bg-white p-6 sm:p-7 rounded-2xl border border-culinary-border shadow-xs space-y-6">
+            <h3 class="text-lg font-bold text-culinary-dark pb-3 border-b border-culinary-border flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-900 text-xs font-extrabold flex items-center justify-center">1</span>
+              Rincian Kebutuhan Acara
+            </h3>
+
+            <!-- Menu Selection Dropdown -->
+            <div>
+              <label for="select-menu" class="block text-sm font-bold text-culinary-dark mb-1.5">
+                Paket Menu Katering <span class="text-rose-600">*</span>
+              </label>
+              <select id="select-menu" class="w-full px-3.5 py-2.5 rounded-lg border border-culinary-border bg-white text-culinary-dark text-sm font-medium focus:border-brand-700 focus:ring-1 focus:ring-brand-700 touch-target transition-colors">
+                <!-- Dynamically populated from JS -->
+              </select>
+              <p id="menu-hint-text" class="text-xs text-culinary-muted mt-1.5"></p>
+            </div>
+
+            <!-- Pax Input with Stepper and Min Validation -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="input-pax" class="block text-sm font-bold text-culinary-dark">
+                  Jumlah Porsi (Pax) <span class="text-rose-600">*</span>
+                </label>
+                <span id="badge-min-order" class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-900">
+                  Minimal 15 pax
+                </span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button type="button" id="btn-decrease-pax" aria-label="Kurangi 5 pax" class="px-3.5 py-2 rounded-lg border border-culinary-border bg-stone-100 hover:bg-stone-200 text-culinary-dark font-extrabold text-base touch-target transition-colors">
+                  -5
+                </button>
+                <button type="button" id="btn-minus-one" aria-label="Kurangi 1 pax" class="px-3 py-2 rounded-lg border border-culinary-border bg-stone-100 hover:bg-stone-200 text-culinary-dark font-extrabold text-base touch-target transition-colors">
+                  -1
+                </button>
+                <input type="number" id="input-pax" min="15" step="1" value="25" class="flex-1 text-center font-bold text-lg px-3 py-2 rounded-lg border border-culinary-border bg-white text-culinary-dark focus:border-brand-700 focus:ring-1 focus:ring-brand-700 touch-target" />
+                <button type="button" id="btn-plus-one" aria-label="Tambah 1 pax" class="px-3 py-2 rounded-lg border border-culinary-border bg-stone-100 hover:bg-stone-200 text-culinary-dark font-extrabold text-base touch-target transition-colors">
+                  +1
+                </button>
+                <button type="button" id="btn-increase-pax" aria-label="Tambah 5 pax" class="px-3.5 py-2 rounded-lg border border-culinary-border bg-stone-100 hover:bg-stone-200 text-culinary-dark font-extrabold text-base touch-target transition-colors">
+                  +5
+                </button>
+              </div>
+              <p id="pax-error-msg" class="hidden text-xs font-medium text-rose-700 mt-1.5 flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                </svg>
+                <span>Jumlah porsi kurang dari batas minimum order paket ini.</span>
+              </p>
+            </div>
+
+            <!-- Optional Add-ons List -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="block text-sm font-bold text-culinary-dark">
+                  Pilihan Menu Pelengkap (Add-ons)
+                </label>
+                <span class="text-xs text-culinary-muted">Opsional</span>
+              </div>
+              <div id="addons-container" class="space-y-2.5">
+                <!-- Dynamically generated checkboxes based on selected menu -->
+              </div>
+              <p class="text-xs text-culinary-muted mt-2 italic">
+                * Harga add-ons dikalikan secara proporsional dengan jumlah porsi (pax) yang dipesan.
+              </p>
+            </div>
+
+            <!-- Delivery Details -->
+            <div class="pt-4 border-t border-culinary-border space-y-4">
+              <h4 class="text-sm font-bold text-culinary-dark">Jadwal & Lokasi Pengantaran</h4>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="input-date" class="block text-xs font-bold text-culinary-dark mb-1">
+                    Tanggal Acara <span class="text-rose-600">*</span>
+                  </label>
+                  <input type="date" id="input-date" class="w-full px-3 py-2 rounded-lg border border-culinary-border bg-white text-culinary-dark text-sm font-medium focus:border-brand-700 focus:ring-1 focus:ring-brand-700 touch-target" required />
+                  <span class="block text-[11px] text-culinary-muted mt-1">Disarankan pemesanan minimal H-1.</span>
+                </div>
+                <div>
+                  <label for="input-time" class="block text-xs font-bold text-culinary-dark mb-1">
+                    Jam Santap / Tiba <span class="text-rose-600">*</span>
+                  </label>
+                  <select id="input-time" class="w-full px-3 py-2 rounded-lg border border-culinary-border bg-white text-culinary-dark text-sm font-medium focus:border-brand-700 focus:ring-1 focus:ring-brand-700 touch-target">
+                    <option value="07.00 WIB (Sarapan)">07.00 WIB (Sarapan)</option>
+                    <option value="09.30 WIB (Coffee Break Pagi)">09.30 WIB (Coffee Break Pagi)</option>
+                    <option value="11.30 WIB (Makan Siang)" selected>11.30 WIB (Makan Siang)</option>
+                    <option value="15.00 WIB (Coffee Break Sore)">15.00 WIB (Coffee Break Sore)</option>
+                    <option value="18.00 WIB (Makan Malam)">18.00 WIB (Makan Malam)</option>
+                  </select>
+                  <span class="block text-[11px] text-culinary-muted mt-1">Kurir tiba 30 menit sebelum jam ini.</span>
+                </div>
+              </div>
+
+              <div>
+                <label for="input-address" class="block text-xs font-bold text-culinary-dark mb-1">
+                  Alamat Pengiriman Lengkap <span class="text-rose-600">*</span>
+                </label>
+                <textarea id="input-address" rows="2" placeholder="Nama gedung/kantor/perumahan, lantai, jalan, nomor, dan patokan..." class="w-full px-3 py-2 rounded-lg border border-culinary-border bg-white text-culinary-dark text-sm focus:border-brand-700 focus:ring-1 focus:ring-brand-700"></textarea>
+              </div>
+
+              <div>
+                <label for="input-notes" class="block text-xs font-bold text-culinary-dark mb-1">
+                  Catatan Khusus Tambahan (Opsional)
+                </label>
+                <input type="text" id="input-notes" placeholder="Misal: Sambal tolong dipisah, sendok dan tisu dibuat 2 paket" class="w-full px-3 py-2 rounded-lg border border-culinary-border bg-white text-culinary-dark text-sm focus:border-brand-700 focus:ring-1 focus:ring-brand-700" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary Card (Right side, 5 cols) -->
+          <div class="lg:col-span-5 sticky top-24 bg-white p-6 sm:p-7 rounded-2xl border border-culinary-border shadow-md space-y-5">
+            <h3 class="text-lg font-bold text-culinary-dark pb-3 border-b border-culinary-border flex items-center justify-between">
+              <span>Ringkasan Estimasi</span>
+              <span id="summary-pax-badge" class="text-xs font-semibold px-2 py-0.5 rounded bg-brand-100 text-brand-900">25 Pax</span>
+            </h3>
+
+            <!-- Itemized breakdown -->
+            <div class="space-y-3 text-sm">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <span id="summary-menu-name" class="font-bold text-culinary-dark block">Paket Menu</span>
+                  <span id="summary-menu-unit-price" class="text-xs text-culinary-muted">Rp 0 / pax</span>
+                </div>
+                <span id="summary-menu-subtotal" class="font-semibold text-culinary-dark">Rp 0</span>
+              </div>
+
+              <div id="summary-addons-list" class="space-y-2 pt-2 border-t border-culinary-border/70 text-xs">
+                <!-- Add-ons line items -->
+              </div>
+
+              <div class="pt-3 border-t border-culinary-border flex items-center justify-between text-xs text-culinary-muted">
+                <span>Total Biaya per Pax:</span>
+                <span id="summary-per-pax-total" class="font-bold text-culinary-dark text-sm">Rp 0</span>
+              </div>
+            </div>
+
+            <!-- Grand Total Highlight -->
+            <div class="p-4 rounded-xl bg-brand-50 border border-brand-200">
+              <span class="block text-xs font-bold text-brand-800 uppercase tracking-wide">Estimasi Total Biaya</span>
+              <div id="summary-grand-total" class="text-2xl sm:text-3xl font-extrabold text-brand-900 mt-0.5">
+                Rp 0
+              </div>
+              <span class="block text-[11px] text-brand-700 mt-1">
+                * Belum termasuk ongkos kirim jika di luar jangkauan free ongkir.
+              </span>
+            </div>
+
+            <!-- WhatsApp Order CTA -->
+            <div>
+              <button type="button" id="btn-whatsapp-order" class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl text-base font-bold bg-wa hover:bg-wa-hover text-white shadow-sm transition-all text-center touch-target focus:ring-2 focus:ring-wa focus:ring-offset-2">
+                <!-- WhatsApp SVG icon -->
+                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824zm-3.423-10.416c-5.523 0-10 4.477-10 10 0 1.778.468 3.448 1.286 4.904l-1.365 4.989 5.12-1.343c1.405.77 3.014 1.218 4.73 1.219 5.522 0 10-4.477 10-10 0-5.522-4.478-10-10-10zm0 18.232c-1.574 0-3.05-.443-4.306-1.212l-.309-.189-3.203.84.855-3.123-.207-.33c-.846-1.347-1.329-2.937-1.329-4.638 0-4.544 3.696-8.24 8.24-8.24 4.545 0 8.24 3.696 8.24 8.24 0 4.545-3.695 8.24-8.24 8.24z"/>
+                </svg>
+                <span>Pesan Sekarang via WhatsApp</span>
+              </button>
+              <p class="text-[11px] text-center text-culinary-muted mt-2">
+                Pesan terformat otomatis tanpa perlu mengetik ulang rincian pesanan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Panduan Pemesanan & Jaminan Layanan (Honest Content, No Slop) -->
+    <section id="panduan" class="py-14 md:py-20 border-b border-culinary-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-700 block mb-1">Kemudahan Layanan</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-culinary-dark tracking-tight">Proses Pemesanan Praktis</h2>
+          <p class="text-sm text-culinary-muted mt-2">Kami mengutamakan alur kerja yang ringkas agar kebutuhan konsumsi acara Anda selesai dalam hitungan menit.</p>
+        </div>
+
+        <!-- 3 Alur Pemesanan Nyata -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div class="p-6 rounded-2xl bg-white border border-culinary-border">
+            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-900 font-extrabold flex items-center justify-center mb-4">
+              01
+            </div>
+            <h3 class="text-base font-bold text-culinary-dark mb-2">Pilih & Hitung Porsi</h3>
+            <p class="text-sm text-culinary-muted leading-relaxed">
+              Tentukan paket menu dan masukkan jumlah pax di kalkulator. Sistem otomatis menghitung total biaya secara transparan.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-culinary-border">
+            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-900 font-extrabold flex items-center justify-center mb-4">
+              02
+            </div>
+            <h3 class="text-base font-bold text-culinary-dark mb-2">Konfirmasi ke WhatsApp</h3>
+            <p class="text-sm text-culinary-muted leading-relaxed">
+              Klik tombol pesan WhatsApp untuk mengirim format data pesanan lengkap. Tim kami langsung mengecek jadwal dapur dan merilis invoice DP.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white border border-culinary-border">
+            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-900 font-extrabold flex items-center justify-center mb-4">
+              03
+            </div>
+            <h3 class="text-base font-bold text-culinary-dark mb-2">Masak Fresh & Antar</h3>
+            <p class="text-sm text-culinary-muted leading-relaxed">
+              Makanan dimasak segar di hari acara dan diantar langsung oleh kurir internal 30 menit sebelum jadwal santap Anda.
+            </p>
+          </div>
+        </div>
+
+        <!-- Komitmen Layanan Dapur -->
+        <div class="bg-brand-900 text-white p-7 sm:p-10 rounded-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-5 h-5 text-brand-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <h4 class="font-bold text-base text-white">Bahan Pilihan & Bersertifikat</h4>
+              </div>
+              <p class="text-xs text-brand-100/90 leading-relaxed">
+                Seluruh daging, ayam, dan bumbu dapur dibeli segar dari suplier terpercaya dengan sertifikat halal resmi.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-5 h-5 text-brand-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h4 class="font-bold text-base text-white">Garansi Tiba Tepat Waktu</h4>
+              </div>
+              <p class="text-xs text-brand-100/90 leading-relaxed">
+                Pengantaran dipersiapkan dengan estimasi tiba di lokasi minimal 30 menit sebelum acara Anda dimulai.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-5 h-5 text-brand-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+                <h4 class="font-bold text-base text-white">Pembayaran Fleksibel</h4>
+              </div>
+              <p class="text-xs text-brand-100/90 leading-relaxed">
+                Uang muka (DP) 50% untuk lock jadwal dapur, pelunasan dapat dilakukan setelah pesanan tiba di lokasi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Kontak Dapur & Operasional -->
+    <section id="kontak" class="py-14 md:py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white p-7 sm:p-10 rounded-2xl border border-culinary-border">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-700 block mb-1">Hubungi Dapur</span>
+            <h2 class="text-2xl font-extrabold text-culinary-dark mb-3">Butuh Konsultasi Menu Khusus?</h2>
+            <p class="text-sm text-culinary-muted leading-relaxed mb-6">
+              Untuk pesanan kustom di atas 100 pax, menu prasmanan khusus hajatan, atau permintaan tester makanan untuk kantor, silakan kontak langsung tim dapur kami.
+            </p>
+            
+            <div class="space-y-3 text-sm text-culinary-dark">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div>
+                  <span class="font-bold block">Lokasi Dapur Utama:</span>
+                  <span class="text-culinary-muted text-xs">Jl. Tebet Raya No. 45, Tebet Timur, Jakarta Selatan 12820</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <span class="font-bold block">Jam Operasional Layanan:</span>
+                  <span class="text-culinary-muted text-xs">Setiap Hari: 06.00 - 20.00 WIB (Penerimaan pesanan online & konsultasi)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-stone-50 p-6 rounded-xl border border-culinary-border">
+            <h3 class="font-bold text-base text-culinary-dark mb-2">Kontak Cepat via WhatsApp</h3>
+            <p class="text-xs text-culinary-muted mb-4">
+              Nomor resmi katering untuk konfirmasi pesanan, invoice resmi, dan tanya jawab menu:
+            </p>
+            <a href="https://wa.me/6281298765432?text=Halo%20Pawon%20Selera,%20saya%20ingin%20tanya%20info%20katering" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full px-5 py-3 rounded-lg text-sm font-bold bg-wa hover:bg-wa-hover text-white transition-colors touch-target">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824zm-3.423-10.416c-5.523 0-10 4.477-10 10 0 1.778.468 3.448 1.286 4.904l-1.365 4.989 5.12-1.343c1.405.77 3.014 1.218 4.73 1.219 5.522 0 10-4.477 10-10 0-5.522-4.478-10-10-10zm0 18.232c-1.574 0-3.05-.443-4.306-1.212l-.309-.189-3.203.84.855-3.123-.207-.33c-.846-1.347-1.329-2.937-1.329-4.638 0-4.544 3.696-8.24 8.24-8.24 4.545 0 8.24 3.696 8.24 8.24 0 4.545-3.695 8.24-8.24 8.24z"/></svg>
+              Chat WhatsApp: 0812-9876-5432
+            </a>
+            <span class="block text-[11px] text-center text-culinary-muted mt-2">
+              [Nomor WhatsApp contoh, dapat dikonfigurasi pada kode sumber]
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="border-t border-culinary-border bg-white py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-culinary-muted">
+      <div>
+        <span class="font-bold text-culinary-dark">Pawon Selera Catering</span> &copy; 2026. Melayani kebutuhan katering kantor & hajatan.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#katalog" class="hover:text-culinary-dark transition-colors">Katalog Menu</a>
+        <a href="#kalkulator" class="hover:text-culinary-dark transition-colors">Kalkulator Pesanan</a>
+        <a href="#panduan" class="hover:text-culinary-dark transition-colors">Panduan</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 5. Sticky Mobile Bar (Visible on mobile only, never covers content) -->
+  <aside id="sticky-mobile-bar" class="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-culinary-border shadow-lg px-4 py-3" aria-label="Ringkasan Pesanan Mobile">
+    <div class="max-w-md mx-auto flex items-center justify-between gap-3">
+      <div>
+        <span class="text-[11px] font-medium text-culinary-muted block leading-none">Estimasi Total</span>
+        <span id="mobile-total-price" class="text-lg font-extrabold text-brand-900 leading-tight">Rp 0</span>
+        <span id="mobile-pax-info" class="text-[10px] text-culinary-muted block leading-none">25 Pax terpilih</span>
+      </div>
+      <a href="#kalkulator" class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-xs font-bold bg-brand-700 hover:bg-brand-800 text-white shadow-xs touch-target transition-colors">
+        Lanjut Pesan
+      </a>
+    </div>
+  </aside>
+
+  <!-- Core JavaScript Architecture: CATERING_DATA & Logic -->
+  <script>
+    /**
+     * ARSITEKTUR DATA KATERING (CRUD READY)
+     * Data master menu katering disatukan dalam variabel global ini.
+     * Nantinya, data ini dapat langsung di-replace dengan API fetch (misal: fetch('/api/menus'))
+     */
+    const CATERING_DATA = {
+      brand: {
+        name: "Pawon Selera Catering",
+        tagline: "Katering Lezat, Porsi Pas, Tepat Waktu untuk Kantor & Hajatan",
+        whatsapp: "6281298765432", // Ganti dengan nomor WhatsApp katering aktif
+        address: "Jl. Tebet Raya No. 45, Tebet Timur, Jakarta Selatan 12820"
+      },
+      categories: [
+        { id: "all", label: "Semua Menu" },
+        { id: "nasi_box", label: "Nasi Box" },
+        { id: "prasmanan", label: "Prasmanan" },
+        { id: "snack", label: "Snack Box" }
+      ],
+      menus: [
+        {
+          id: "menu-1",
+          name: "Nasi Kuning Komplit Selera",
+          category: "nasi_box",
+          price: 28000,
+          min_order: 15,
+          description: "Nasi kuning bumbu rempah asli, ayam lengkuas empuk, orek tempe manis gurih, telur balado iris, perkedel kentang lembut, lalapan timun kemangi, dan sambal bajak.",
+          image_url: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
+          addons: [
+            { id: "add-1-1", name: "Kerupuk Udang Renyah", price: 2000 },
+            { id: "add-1-2", name: "Es Cincau Gula Jawa Segar", price: 4000 },
+            { id: "add-1-3", name: "Buah Semangka Potong Dingin", price: 3000 }
+          ]
+        },
+        {
+          id: "menu-2",
+          name: "Nasi Liwet Gurih Solo",
+          category: "nasi_box",
+          price: 32000,
+          min_order: 15,
+          description: "Nasi liwet gurih santan wangi pandan, suwiran ayam opor lembut, sayur labu siam pedas manis, areh santan kental, telur pindang cokelat, dan sambal terasi matang.",
+          image_url: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
+          addons: [
+            { id: "add-2-1", name: "Kerupuk Kulit Gurih", price: 2500 },
+            { id: "add-2-2", name: "Es Teh Manis Jumbo", price: 3000 },
+            { id: "add-2-3", name: "Tahu Bacem Goreng Gurih", price: 2500 }
+          ]
+        },
+        {
+          id: "menu-3",
+          name: "Bento Ayam Teriyaki Wijaya",
+          category: "nasi_box",
+          price: 35000,
+          min_order: 10,
+          description: "Nasi putih pulen, ayam fillet saus teriyaki wijen gurih manis, egg roll goreng renyah, tumis buncis jagung manis, lengkap dengan saus sambal sachet.",
+          image_url: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80",
+          addons: [
+            { id: "add-3-1", name: "Puding Mangga Vla Susu", price: 4000 },
+            { id: "add-3-2", name: "Ocha Teh Hijau Dingin", price: 4000 },
+            { id: "add-3-3", name: "Pangsit Goreng Mini", price: 2000 }
+          ]
+        },
+        {
+          id: "menu-4",
+          name: "Prasmanan Selera Nusantara",
+          category: "prasmanan",
+          price: 55000,
+          min_order: 30,
+          description: "Paket lengkap meja prasmanan: Nasi putih pandan, rendang daging sapi empuk khas Minang, kakap fillet asam manis, sup kimlo ayam bakso, soun goreng kampung, acar kuning, dan kerupuk udang.",
+          image_url: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80",
+          addons: [
+            { id: "add-4-1", name: "Es Buah Fiesta Segar", price: 6000 },
+            { id: "add-4-2", name: "Puding Cokelat Vla Vanila", price: 5000 },
+            { id: "add-4-3", name: "Siomay Kukus Bumbu Kacang", price: 7000 }
+          ]
+        },
+        {
+          id: "menu-5",
+          name: "Prasmanan Tradisional Joglo",
+          category: "prasmanan",
+          price: 65000,
+          min_order: 30,
+          description: "Paket prasmanan pesta: Nasi putih wangi, empal daging serundeng gurih, gurame terbang saus mangga muda, sambal krecek kuah santan pedas, capcay kuah seafood, sup iga sayur bening, dan kerupuk emping.",
+          image_url: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80",
+          addons: [
+            { id: "add-5-1", name: "Es Kopyor Selasih Segar", price: 7000 },
+            { id: "add-5-2", name: "Asinan Sayur Khas Betawi", price: 6000 },
+            { id: "add-5-3", name: "Kerupuk Emping Ekstra", price: 3000 }
+          ]
+        },
+        {
+          id: "menu-6",
+          name: "Snack Box Rapat Premium",
+          category: "snack",
+          price: 18000,
+          min_order: 20,
+          description: "Kombinasi 3 kue pilihan: Lemper bakar ayam suwir pulen, risoles smoked beef keju mayones, bolu kukus pandan keju, plus air mineral cup 220ml.",
+          image_url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80",
+          addons: [
+            { id: "add-6-1", name: "Pastel Goreng Renyah", price: 3500 },
+            { id: "add-6-2", name: "Jus Jeruk Kotak Segar", price: 4500 }
+          ]
+        },
+        {
+          id: "menu-7",
+          name: "Snack Box Tradisional Manis Gurih",
+          category: "snack",
+          price: 15000,
+          min_order: 20,
+          description: "Arem-arem ayam wortel gurih, pie buah segar vla vanila manis, kue lumpur kentang kismis lembut, plus air mineral cup 220ml.",
+          image_url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80",
+          addons: [
+            { id: "add-7-1", name: "Sosis Solo Ayam Lembut", price: 3500 },
+            { id: "add-7-2", name: "Teh Kotak Melati Dingin", price: 4000 }
+          ]
+        }
+      ]
+    };
+
+    /**
+     * STATE MANAGEMENT
+     */
+    let currentSelectedCategory = 'all';
+    let currentSelectedMenuId = CATERING_DATA.menus[0].id;
+    let currentPax = 25;
+    let selectedAddonIds = new Set();
+
+    /**
+     * UTILITY: Format number to Indonesian Rupiah (e.g., Rp 28.000)
+     */
+    function formatRupiah(amount) {
+      return 'Rp ' + Number(amount).toLocaleString('id-ID');
+    }
+
+    /**
+     * RENDER MENU CATALOGUE (DYNAMIC FROM CATERING_DATA)
+     */
+    function renderMenuCatalogue(category = 'all') {
+      const container = document.getElementById('menu-grid');
+      const emptyState = document.getElementById('menu-empty-state');
+      if (!container) return;
+
+      const filteredMenus = category === 'all' 
+        ? CATERING_DATA.menus 
+        : CATERING_DATA.menus.filter(m => m.category === category);
+
+      if (filteredMenus.length === 0) {
+        container.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+
+      if (emptyState) emptyState.classList.add('hidden');
+
+      container.innerHTML = filteredMenus.map(menu => {
+        const isSelected = menu.id === currentSelectedMenuId;
+        const categoryLabel = menu.category === 'nasi_box' ? 'Nasi Box' : (menu.category === 'prasmanan' ? 'Prasmanan' : 'Snack Box');
+
+        return `
+          <article class="bg-white rounded-2xl border ${isSelected ? 'border-brand-700 ring-2 ring-brand-700/20' : 'border-culinary-border'} shadow-xs hover:shadow-md transition-all flex flex-col overflow-hidden group">
+            <div class="relative h-48 w-full bg-stone-100 overflow-hidden">
+              <img 
+                src="${menu.image_url}" 
+                alt="${menu.name}" 
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80';"
+              />
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-white/95 text-culinary-dark shadow-xs backdrop-blur-xs">
+                ${categoryLabel}
+              </span>
+              <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md text-xs font-semibold bg-stone-900/80 text-white backdrop-blur-xs">
+                Min. ${menu.min_order} pax
+              </span>
+            </div>
+
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-baseline justify-between gap-2 mb-2">
+                  <h3 class="font-extrabold text-base sm:text-lg text-culinary-dark leading-snug">
+                    ${menu.name}
+                  </h3>
+                </div>
+                <div class="text-brand-800 font-extrabold text-lg sm:text-xl mb-3">
+                  ${formatRupiah(menu.price)}
+                  <span class="text-xs font-medium text-culinary-muted">/ pax</span>
+                </div>
+                <p class="text-xs sm:text-sm text-culinary-muted leading-relaxed line-clamp-3 mb-4">
+                  ${menu.description}
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-culinary-border/70 flex items-center justify-between gap-3">
+                <span class="text-[11px] text-culinary-muted font-medium">
+                  ${menu.addons && menu.addons.length > 0 ? `+${menu.addons.length} opsi add-on` : 'Menu komplit'}
+                </span>
+                <button 
+                  type="button" 
+                  onclick="selectMenuAndScroll('${menu.id}')"
+                  class="inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-colors touch-target ${isSelected ? 'bg-emerald-700 text-white' : 'bg-brand-700 hover:bg-brand-800 text-white'} shadow-xs">
+                  ${isSelected ? 'Menu Terpilih' : 'Pilih Menu & Hitung'}
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    /**
+     * POPULATE SELECT DROPDOWN IN CALCULATOR
+     */
+    function populateMenuDropdown() {
+      const select = document.getElementById('select-menu');
+      if (!select) return;
+
+      select.innerHTML = CATERING_DATA.menus.map(menu => {
+        return `<option value="${menu.id}">${menu.name} - ${formatRupiah(menu.price)} / pax (Min. ${menu.min_order} pax)</option>`;
+      }).join('');
+
+      select.value = currentSelectedMenuId;
+    }
+
+    /**
+     * RENDER ADD-ONS FOR CURRENT SELECTED MENU
+     */
+    function renderAddons() {
+      const container = document.getElementById('addons-container');
+      if (!container) return;
+
+      const currentMenu = CATERING_DATA.menus.find(m => m.id === currentSelectedMenuId);
+      if (!currentMenu || !currentMenu.addons || currentMenu.addons.length === 0) {
+        container.innerHTML = `<p class="text-xs text-culinary-muted italic">Paket ini sudah lengkap, tidak memerlukan add-ons khusus.</p>`;
+        return;
+      }
+
+      container.innerHTML = currentMenu.addons.map(addon => {
+        const isChecked = selectedAddonIds.has(addon.id);
+        return `
+          <label class="flex items-center justify-between p-3 rounded-xl border ${isChecked ? 'border-brand-700 bg-brand-50/50' : 'border-culinary-border bg-white'} hover:bg-stone-50 cursor-pointer transition-colors touch-target">
+            <div class="flex items-center gap-3">
+              <input 
+                type="checkbox" 
+                value="${addon.id}" 
+                ${isChecked ? 'checked' : ''}
+                onchange="toggleAddon('${addon.id}')"
+                class="w-4 h-4 rounded text-brand-700 focus:ring-brand-700 border-culinary-border"
+              />
+              <span class="text-sm font-medium text-culinary-dark">${addon.name}</span>
+            </div>
+            <span class="text-xs font-bold text-brand-800">+${formatRupiah(addon.price)} / pax</span>
+          </label>
+        `;
+      }).join('');
+    }
+
+    /**
+     * RECALCULATE LIVE TOTAL & UPDATE UI
+     */
+    function recalculate() {
+      const currentMenu = CATERING_DATA.menus.find(m => m.id === currentSelectedMenuId) || CATERING_DATA.menus[0];
+      const paxInput = document.getElementById('input-pax');
+      const errorMsg = document.getElementById('pax-error-msg');
+      const badgeMinOrder = document.getElementById('badge-min-order');
+      const hintText = document.getElementById('menu-hint-text');
+
+      // Update minimum limit
+      if (paxInput) {
+        paxInput.min = currentMenu.min_order;
+      }
+      if (badgeMinOrder) {
+        badgeMinOrder.textContent = `Minimal ${currentMenu.min_order} pax`;
+      }
+      if (hintText) {
+        hintText.textContent = `${currentMenu.description}`;
+      }
+
+      let pax = parseInt(paxInput ? paxInput.value : currentPax, 10);
+      if (isNaN(pax) || pax <= 0) {
+        pax = currentMenu.min_order;
+      }
+
+      // Check min order validation
+      if (pax < currentMenu.min_order) {
+        if (errorMsg) {
+          errorMsg.classList.remove('hidden');
+          errorMsg.querySelector('span').textContent = `Minimum pemesanan untuk paket ini adalah ${currentMenu.min_order} pax.`;
+        }
+      } else {
+        if (errorMsg) errorMsg.classList.add('hidden');
+      }
+
+      currentPax = pax;
+
+      // Base menu cost
+      const menuSubtotal = currentMenu.price * pax;
+
+      // Addons cost calculation
+      let totalAddonsPerPax = 0;
+      const addonsBreakdownEl = document.getElementById('summary-addons-list');
+      let addonsHtml = '';
+
+      if (currentMenu.addons && currentMenu.addons.length > 0) {
+        currentMenu.addons.forEach(addon => {
+          if (selectedAddonIds.has(addon.id)) {
+            totalAddonsPerPax += addon.price;
+            const addonSubtotal = addon.price * pax;
+            addonsHtml += `
+              <div class="flex items-center justify-between text-culinary-muted">
+                <span>+ ${addon.name} (${pax} x ${formatRupiah(addon.price)})</span>
+                <span class="font-medium text-culinary-dark">${formatRupiah(addonSubtotal)}</span>
+              </div>
+            `;
+          }
+        });
+      }
+
+      if (addonsBreakdownEl) {
+        addonsBreakdownEl.innerHTML = addonsHtml || `<div class="text-culinary-muted italic">Tidak ada add-ons dipilih</div>`;
+      }
+
+      const totalAddonsSubtotal = totalAddonsPerPax * pax;
+      const perPaxTotal = currentMenu.price + totalAddonsPerPax;
+      const grandTotal = menuSubtotal + totalAddonsSubtotal;
+
+      // Update Order Summary Panel
+      const summaryPaxBadge = document.getElementById('summary-pax-badge');
+      const summaryMenuName = document.getElementById('summary-menu-name');
+      const summaryMenuUnitPrice = document.getElementById('summary-menu-unit-price');
+      const summaryMenuSubtotal = document.getElementById('summary-menu-subtotal');
+      const summaryPerPaxTotal = document.getElementById('summary-per-pax-total');
+      const summaryGrandTotal = document.getElementById('summary-grand-total');
+
+      if (summaryPaxBadge) summaryPaxBadge.textContent = `${pax} Pax`;
+      if (summaryMenuName) summaryMenuName.textContent = currentMenu.name;
+      if (summaryMenuUnitPrice) summaryMenuUnitPrice.textContent = `${pax} x ${formatRupiah(currentMenu.price)}`;
+      if (summaryMenuSubtotal) summaryMenuSubtotal.textContent = formatRupiah(menuSubtotal);
+      if (summaryPerPaxTotal) summaryPerPaxTotal.textContent = `${formatRupiah(perPaxTotal)} / pax`;
+      if (summaryGrandTotal) summaryGrandTotal.textContent = formatRupiah(grandTotal);
+
+      // Update Mobile Sticky Bar
+      const mobileTotalPrice = document.getElementById('mobile-total-price');
+      const mobilePaxInfo = document.getElementById('mobile-pax-info');
+      if (mobileTotalPrice) mobileTotalPrice.textContent = formatRupiah(grandTotal);
+      if (mobilePaxInfo) mobilePaxInfo.textContent = `${pax} Pax - ${currentMenu.name.split(' ')[0]}...`;
+    }
+
+    /**
+     * SELECT MENU & SCROLL TO CALCULATOR
+     */
+    function selectMenuAndScroll(menuId) {
+      currentSelectedMenuId = menuId;
+      const currentMenu = CATERING_DATA.menus.find(m => m.id === menuId);
+      if (currentMenu && currentPax < currentMenu.min_order) {
+        currentPax = currentMenu.min_order;
+        const paxInput = document.getElementById('input-pax');
+        if (paxInput) paxInput.value = currentPax;
+      }
+
+      // Reset addons for newly selected menu
+      selectedAddonIds.clear();
+
+      populateMenuDropdown();
+      renderAddons();
+      recalculate();
+      renderMenuCatalogue(currentSelectedCategory);
+
+      // Smooth scroll to calculator
+      const calcEl = document.getElementById('kalkulator');
+      if (calcEl) {
+        calcEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    /**
+     * TOGGLE ADDON CHECKBOX
+     */
+    function toggleAddon(addonId) {
+      if (selectedAddonIds.has(addonId)) {
+        selectedAddonIds.delete(addonId);
+      } else {
+        selectedAddonIds.add(addonId);
+      }
+      renderAddons();
+      recalculate();
+    }
+
+    /**
+     * FILTER MENU CATEGORY
+     */
+    function filterMenu(category) {
+      currentSelectedCategory = category;
+
+      // Update pill buttons visual state
+      document.querySelectorAll('.category-filter-btn').forEach(btn => {
+        const btnCategory = btn.getAttribute('data-category');
+        const isActive = btnCategory === category;
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        if (isActive) {
+          btn.className = 'category-filter-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all bg-brand-700 text-white shadow-xs touch-target';
+        } else {
+          btn.className = 'category-filter-btn px-3.5 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all text-culinary-muted hover:text-culinary-dark touch-target';
+        }
+      });
+
+      renderMenuCatalogue(category);
+    }
+
+    /**
+     * SEND ORDER TO WHATSAPP
+     */
+    function handleWhatsAppOrder() {
+      const currentMenu = CATERING_DATA.menus.find(m => m.id === currentSelectedMenuId) || CATERING_DATA.menus[0];
+      const paxInput = document.getElementById('input-pax');
+      const dateInput = document.getElementById('input-date');
+      const timeInput = document.getElementById('input-time');
+      const addressInput = document.getElementById('input-address');
+      const notesInput = document.getElementById('input-notes');
+
+      const pax = parseInt(paxInput ? paxInput.value : currentPax, 10);
+
+      // Validate Pax against min_order
+      if (pax < currentMenu.min_order) {
+        alert(`Jumlah pesanan belum memenuhi batas minimum order untuk paket ini (Minimal ${currentMenu.min_order} pax). Silakan sesuaikan jumlah porsi.`);
+        if (paxInput) {
+          paxInput.focus();
+          paxInput.value = currentMenu.min_order;
+          recalculate();
+        }
+        return;
+      }
+
+      // Validate Date
+      const dateVal = dateInput ? dateInput.value.trim() : '';
+      if (!dateVal) {
+        alert('Mohon pilih tanggal acara Anda terlebih dahulu.');
+        if (dateInput) dateInput.focus();
+        return;
+      }
+
+      // Validate Address
+      const addressVal = addressInput ? addressInput.value.trim() : '';
+      if (!addressVal) {
+        alert('Mohon lengkapi alamat pengiriman katering.');
+        if (addressInput) addressInput.focus();
+        return;
+      }
+
+      // Format Date nicely (Indonesian date format)
+      let formattedDate = dateVal;
+      try {
+        const d = new Date(dateVal);
+        formattedDate = d.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+      } catch (e) {
+        formattedDate = dateVal;
+      }
+
+      const timeVal = timeInput ? timeInput.value : '11.30 WIB';
+      const notesVal = notesInput ? notesInput.value.trim() : '-';
+
+      // Calculate totals
+      const menuSubtotal = currentMenu.price * pax;
+      let totalAddonsPerPax = 0;
+      let addonsListText = '';
+
+      if (currentMenu.addons && currentMenu.addons.length > 0) {
+        currentMenu.addons.forEach(addon => {
+          if (selectedAddonIds.has(addon.id)) {
+            totalAddonsPerPax += addon.price;
+            const sub = addon.price * pax;
+            addonsListText += `  • ${addon.name} (${pax} x ${formatRupiah(addon.price)} = ${formatRupiah(sub)})\n`;
+          }
+        });
+      }
+
+      const totalAddonsSubtotal = totalAddonsPerPax * pax;
+      const grandTotal = menuSubtotal + totalAddonsSubtotal;
+
+      // Construct clean WhatsApp message
+      let message = `Halo ${CATERING_DATA.brand.name}, saya ingin memesan katering dengan rincian berikut:\n\n`;
+      message += `*RINCIAN PESANAN:*\n`;
+      message += `• Paket Menu: ${currentMenu.name}\n`;
+      message += `• Kategori: ${currentMenu.category === 'nasi_box' ? 'Nasi Box' : (currentMenu.category === 'prasmanan' ? 'Prasmanan' : 'Snack Box')}\n`;
+      message += `• Jumlah Porsi: ${pax} Pax (${formatRupiah(currentMenu.price)} / pax)\n`;
+      
+      if (addonsListText) {
+        message += `• Menu Tambahan (Add-ons):\n${addonsListText}`;
+      } else {
+        message += `• Menu Tambahan (Add-ons): Tidak ada\n`;
+      }
+
+      message += `\n*JADWAL & PENGIRIMAN:*\n`;
+      message += `• Tanggal Acara: ${formattedDate}\n`;
+      message += `• Waktu Tiba: ${timeVal}\n`;
+      message += `• Alamat Pengiriman: ${addressVal}\n`;
+      message += `• Catatan Khusus: ${notesVal}\n\n`;
+
+      message += `*RINGKASAN BIAYA:*\n`;
+      message += `• Subtotal Menu: ${formatRupiah(menuSubtotal)}\n`;
+      if (totalAddonsSubtotal > 0) {
+        message += `• Subtotal Add-ons: ${formatRupiah(totalAddonsSubtotal)}\n`;
+      }
+      message += `• *Estimasi Total: ${formatRupiah(grandTotal)}*\n\n`;
+      message += `Mohon konfirmasi ketersediaan slot dapur dan info invoice pemesanan. Terima kasih!`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${CATERING_DATA.brand.whatsapp}?text=${encodedMessage}`;
+
+      window.open(whatsappUrl, '_blank');
+    }
+
+    /**
+     * INITIALIZATION ON DOM READY
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initial Render
+      populateMenuDropdown();
+      renderMenuCatalogue('all');
+      renderAddons();
+
+      // 2. Set min date for delivery date picker (tomorrow)
+      const dateInput = document.getElementById('input-date');
+      if (dateInput) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const yyyy = tomorrow.getFullYear();
+        const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+        const dd = String(tomorrow.getDate()).padStart(2, '0');
+        dateInput.min = `${yyyy}-${mm}-${dd}`;
+        dateInput.value = `${yyyy}-${mm}-${dd}`;
+      }
+
+      // 3. Calculator Event Listeners
+      const selectMenu = document.getElementById('select-menu');
+      if (selectMenu) {
+        selectMenu.addEventListener('change', (e) => {
+          currentSelectedMenuId = e.target.value;
+          selectedAddonIds.clear();
+          renderAddons();
+          recalculate();
+          renderMenuCatalogue(currentSelectedCategory);
+        });
+      }
+
+      const paxInput = document.getElementById('input-pax');
+      if (paxInput) {
+        paxInput.addEventListener('input', () => {
+          recalculate();
+        });
+      }
+
+      // Stepper buttons
+      const btnMinusOne = document.getElementById('btn-minus-one');
+      if (btnMinusOne) {
+        btnMinusOne.addEventListener('click', () => {
+          const currentMenu = CATERING_DATA.menus.find(m => m.id === currentSelectedMenuId);
+          const min = currentMenu ? currentMenu.min_order : 1;
+          if (paxInput && parseInt(paxInput.value, 10) > min) {
+            paxInput.value = parseInt(paxInput.value, 10) - 1;
+            recalculate();
+          }
+        });
+      }
+
+      const btnPlusOne = document.getElementById('btn-plus-one');
+      if (btnPlusOne) {
+        btnPlusOne.addEventListener('click', () => {
+          if (paxInput) {
+            paxInput.value = parseInt(paxInput.value, 10) + 1;
+            recalculate();
+          }
+        });
+      }
+
+      const btnDecreasePax = document.getElementById('btn-decrease-pax');
+      if (btnDecreasePax) {
+        btnDecreasePax.addEventListener('click', () => {
+          const currentMenu = CATERING_DATA.menus.find(m => m.id === currentSelectedMenuId);
+          const min = currentMenu ? currentMenu.min_order : 1;
+          if (paxInput) {
+            const currentVal = parseInt(paxInput.value, 10);
+            paxInput.value = Math.max(min, currentVal - 5);
+            recalculate();
+          }
+        });
+      }
+
+      const btnIncreasePax = document.getElementById('btn-increase-pax');
+      if (btnIncreasePax) {
+        btnIncreasePax.addEventListener('click', () => {
+          if (paxInput) {
+            paxInput.value = parseInt(paxInput.value, 10) + 5;
+            recalculate();
+          }
+        });
+      }
+
+      // Category tab buttons
+      document.querySelectorAll('.category-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cat = btn.getAttribute('data-category');
+          filterMenu(cat);
+        });
+      });
+
+      // WhatsApp Button
+      const btnWhatsApp = document.getElementById('btn-whatsapp-order');
+      if (btnWhatsApp) {
+        btnWhatsApp.addEventListener('click', handleWhatsAppOrder);
+      }
+
+      // Initial calculation run
+      recalculate();
+    });
+  </script>
+</body>
+</html>
