@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" fill="none">
+  <rect width="40" height="40" rx="8" fill="#b45309"/>
+  <!-- Placeholder Icon: Rice bowl / culinary cloche -->
+  <path d="M11 22C11 26.9706 15.0294 31 20 31C24.9706 31 29 26.9706 29 22H11Z" fill="#FFFFFF"/>
+  <path d="M12 20C12 16.5 15.5 13 20 13C24.5 13 28 16.5 28 20H12Z" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="20" cy="11" r="1.5" fill="#FFFFFF"/>
+</svg>
